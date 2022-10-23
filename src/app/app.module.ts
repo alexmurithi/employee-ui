@@ -8,6 +8,7 @@ import { ListEmployeeComponent } from './components/list-employee/list-employee.
 import { AddEmployeeComponent } from './components/add-employee/add-employee.component';
 import { UpdateEmployeeComponent } from './components/update-employee/update-employee.component';
 import { FormsModule } from '@angular/forms';
+import { ViewEmployeeComponent } from './components/view-employee/view-employee.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { FormsModule } from '@angular/forms';
     ListEmployeeComponent,
     AddEmployeeComponent,
     UpdateEmployeeComponent,
+    ViewEmployeeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

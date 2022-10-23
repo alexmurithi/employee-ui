@@ -17,7 +17,12 @@
         <td>{{ employee.lastName }}</td>
         <td>{{ employee.emailId }}</td>
         <td>
-          <button class="btn btn-primary">View</button>
+          <button
+            class="btn btn-primary"
+            [routerLink]="['/employees', employee.id]"
+          >
+            View
+          </button>
           <button
             class="btn btn-success mx-2"
             [routerLink]="['/employees', 'edit', employee.id]"
