@@ -31,4 +31,8 @@ export class EmployeeService {
       updateEmployeeRequest
     );
   }
+
+  deleteEmployee(id: number): Observable<Employee> {
+    return this.http.delete<Employee>(`${this.baseAPIUrl}/${id}`);
+  }
 }

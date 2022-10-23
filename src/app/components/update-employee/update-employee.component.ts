@@ -1,4 +1,3 @@
-import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Employee } from 'src/app/models/employee.model';
@@ -45,4 +44,6 @@ export class UpdateEmployeeComponent implements OnInit {
         },
       });
   }
+
+  
 }
