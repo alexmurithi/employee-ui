@@ -12,27 +12,22 @@ export class EmployeeService {
 
   constructor(private http: HttpClient) {}
   getAllEmployees(): Observable<Employee[]> {
-    return this.http.get<Employee[]>(`${this.baseAPIUrl + 'api/v1/employees'}`);
+    return this.http.get<Employee[]>(`${this.baseAPIUrl}`);
   }
   addEmployee(addEmployeeRequest: Employee): Observable<Employee> {
-    return this.http.post<Employee>(
-      `${this.baseAPIUrl + 'api/v1/employees'}`,
-      addEmployeeRequest
-    );
+    return this.http.post<Employee>(`${this.baseAPIUrl}`, addEmployeeRequest);
   }
 
   getEmployee(id: number): Observable<Employee> {
-    return this.http.get<Employee>(
-      `${this.baseAPIUrl + 'api/employees/'}` + id
-    );
+    return this.http.get<Employee>(`${this.baseAPIUrl}/${id}`);
   }
 
   updateEmployee(
-    id: number,
+    id: any,
     updateEmployeeRequest: Employee
   ): Observable<Employee> {
     return this.http.put<Employee>(
-      `${this.baseAPIUrl + 'api/employees/'}` + id,
+      `${this.baseAPIUrl}/${id}`,
       updateEmployeeRequest
     );
   }

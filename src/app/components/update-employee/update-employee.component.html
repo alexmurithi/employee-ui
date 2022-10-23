@@ -1,1 +1,41 @@
-<p>update-employee works!</p>
+<div class="container">
+  <h3>Add Employee</h3>
+  <form #form="ngForm" (ngSubmit)="updateEmployee()">
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label"
+        >First Name</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="firstNameInput"
+        placeholder="First Name"
+        name="firstName"
+        [(ngModel)]="employeeUpdateRequest.firstName"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="lastNameInput"
+        placeholder="Last Name"
+        name="lastName"
+        [(ngModel)]="employeeUpdateRequest.lastName"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="emailInput"
+        placeholder="name@example.com"
+        name="email"
+        [(ngModel)]="employeeUpdateRequest.emailId"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

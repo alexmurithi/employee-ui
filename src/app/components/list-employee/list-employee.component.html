@@ -7,6 +7,7 @@
         <th scope="col">First Name</th>
         <th scope="col">Last Name</th>
         <th scope="col">Email</th>
+        <th scope="colgroup">Actions</th>
       </tr>
     </thead>
     <tbody class="table-group-divider">
@@ -15,6 +16,14 @@
         <td>{{ employee.firstName }}</td>
         <td>{{ employee.lastName }}</td>
         <td>{{ employee.emailId }}</td>
+        <td>
+          <button
+            class="btn btn-success mx-2"
+            [routerLink]="['/employees', 'edit', employee.id]"
+          >
+            View</button
+          ><button class="btn btn-danger mx-2">Delete</button>
+        </td>
       </tr>
     </tbody>
   </table>
