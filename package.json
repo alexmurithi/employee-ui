@@ -7,9 +7,9 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start:dev":"ng serve",
     "heroku-postbuild": "ng build --configuration production && npm install -g http-server-spa",
-    "start-deploy": "http-server-spa dist/employee-app index.html $PORT",
+    "start": "http-server-spa dist/employee-app index.html $PORT",
     "lint": "ng lint",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
